@@ -1,26 +1,360 @@
 @import "tailwindcss";
 
+/* ============================================================
+   DESIGN TOKENS — Gấu's Story · Pastel Dreamy (High Contrast)
+   Peach Cream, Pastel Pink, Sky Blue, Lavender, Mint, Yellow
+   ============================================================ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Background — Nền đào đậm hơn để tăng tương phản */
+  --bg-base: #F9D4B0;       /* Deep Peach Cream — đủ đậm để tương phản rõ */
+  --bg-subtle: #F5C89A;     /* Deeper Warm Peach — section xen kẽ, đậm hơn rõ */
+  --bg-alt: #FCDFC2;        /* Soft Peach Alt — xen kẽ nhẹ hơn */
+  --bg-card: #FFFBF7;       /* Card trắng ngà — nổi bật rõ trên nền đào đậm */
+  --bg-card-hover: #FFF0E8; /* Hover kem hồng rõ */
+
+  /* Text — Plum gần đen, tương phản cao trên nền pastel đào */
+  --text-primary: #1E0F1A;  /* Near-black Plum — tương phản tối đa */
+  --text-secondary: #4A2840;/* Dark Plum — đủ đậm, dễ đọc */
+  --text-muted: #7A5570;    /* Medium Mauve — rõ hơn trước */
+  --text-inverse: #FFFBF8;  /* Chữ sáng trên nền CTA */
+
+  /* Brand Colors — Pastel palette từ bảng màu (giữ nguyên) */
+  --brand-pink: #FFB3C1;    /* Pastel Pink */
+  --brand-blue: #B3D9FF;    /* Pastel Sky Blue */
+  --brand-lavender: #C8B3FF;/* Pastel Lavender */
+  --brand-mint: #B3F0D9;    /* Pastel Mint */
+  --brand-yellow: #FEFBB3;  /* Pastel Yellow */
+
+  /* Accent — Rose đậm hơn để nút CTA nổi bật trên nền đào */
+  --accent: #CC4A65;        /* Deep Rose — WCAG AA compliant, đủ đậm */
+  --accent-light: #FCCDD6;  /* Tint hồng nhạt cho hover bg */
+  --accent-dark: #A03350;   /* Darker Rose — hover state */
+
+  /* Tông đồng hành */
+  --accent-sage: #3D9E7A;   /* Deeper Mint Green — tương phản tốt */
+  --accent-gold: #5B9ED4;   /* Deeper Sky Blue — đủ đậm để dùng làm icon */
+
+  /* Border — Đậm rõ hơn để tách biệt các vùng */
+  --border-light: rgba(30, 15, 26, 0.14);
+  --border-medium: rgba(30, 15, 26, 0.25);
+  --border-strong: rgba(204, 74, 101, 0.55);
+
+  /* Shadow — Bóng đổ đậm hơn, tạo chiều sâu rõ */
+  --shadow-xs: 0 1px 4px rgba(30, 15, 26, 0.12);
+  --shadow-sm: 0 4px 16px rgba(30, 15, 26, 0.14), 0 1px 4px rgba(30, 15, 26, 0.08);
+  --shadow-md: 0 10px 32px rgba(30, 15, 26, 0.18), 0 4px 12px rgba(30, 15, 26, 0.10);
+  --shadow-lg: 0 24px 54px rgba(30, 15, 26, 0.22), 0 8px 22px rgba(30, 15, 26, 0.12);
+
+  /* Radius */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  /* Transition */
+  --ease-luxury: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 180ms;
+  --duration-base: 360ms;
+  --duration-slow: 650ms;
 }
 
+/* ============================================================
+   DARK MODE — Deep Dreamy Night / Midnight Plum
+   Phù hợp với pastel: nền tím than, text kem nhạt, accent hồng sáng
+   ============================================================ */
+.dark {
+  /* Nền tối tông tím than / midnight, hài hoà với pastel */
+  --bg-base: #1A1420;       /* Midnight Plum — tím than sâu */
+  --bg-subtle: #221829;     /* Deep Violet Slate */
+  --bg-alt: #1E1724;        /* Dark Lavender Slate xen kẽ */
+  --bg-card: #2E2240;       /* Rich Plum Card */
+  --bg-card-hover: #3A2B50; /* Hover Plum sáng hơn */
+
+  /* Chữ kem lavender sáng rõ ràng, tương phản tốt */
+  --text-primary: #F5EEFF;  /* Lavender Cream */
+  --text-secondary: #D8C8EE;/* Soft Lavender */
+  --text-muted: #A090BE;    /* Muted Lilac */
+  --text-inverse: #1A1420;
+
+  /* Brand — pastel sáng hơn cho dark */
+  --brand-pink: #FFB3C1;
+  --brand-blue: #B3D9FF;
+  --brand-lavender: #D4BFFF;
+  --brand-mint: #B3F0D9;
+  --brand-yellow: #FEFBB3;
+
+  /* Accent — hồng sáng rực rỡ trong dark mode */
+  --accent: #FF8FA3;        /* Bright Pastel Rose */
+  --accent-light: rgba(255, 143, 163, 0.18);
+  --accent-dark: #FFB3C4;   /* Lighter Rose hover */
+
+  --accent-sage: #7ECBA8;
+  --accent-gold: #B3D9FF;
+
+  /* Border — tím nhạt tinh tế */
+  --border-light: rgba(245, 238, 255, 0.08);
+  --border-medium: rgba(245, 238, 255, 0.15);
+  --border-strong: rgba(255, 143, 163, 0.50);
+
+  --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.5);
+  --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.45), 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.55), 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.65), 0 0 40px rgba(255, 143, 163, 0.10);
+}
+
+/* ============================================================
+   TAILWIND v4 THEME EXTENSION
+   ============================================================ */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg-base: var(--bg-base);
+  --color-bg-subtle: var(--bg-subtle);
+  --color-bg-alt: var(--bg-alt);
+  --color-bg-card: var(--bg-card);
+  --color-bg-card-hover: var(--bg-card-hover);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-text-inverse: var(--text-inverse);
+
+  /* Legacy aliases — kept for backward compat */
+  --color-brand-taupe: var(--accent);
+  --color-brand-warm: var(--brand-pink);
+  --color-brand-cream: var(--brand-yellow);
+
+  /* New pastel brand palette */
+  --color-brand-pink: var(--brand-pink);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-lavender: var(--brand-lavender);
+  --color-brand-mint: var(--brand-mint);
+  --color-brand-yellow: var(--brand-yellow);
+
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-accent-dark: var(--accent-dark);
+  --color-accent-sage: var(--accent-sage);
+  --color-accent-gold: var(--accent-gold);
+
+  --color-border-light: var(--border-light);
+  --color-border-medium: var(--border-medium);
+  --color-border-strong: var(--border-strong);
+
+  --font-heading: var(--font-cormorant), var(--font-playfair), Georgia, serif;
+  --font-body: var(--font-inter), var(--font-be-vietnam), system-ui, sans-serif;
+
+  --shadow-luxury-xs: var(--shadow-xs);
+  --shadow-luxury-sm: var(--shadow-sm);
+  --shadow-luxury-md: var(--shadow-md);
+  --shadow-luxury-lg: var(--shadow-lg);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ============================================================
+   BASE RESET & GLOBAL STYLES
+   ============================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  transition: background-color var(--duration-slow) var(--ease-luxury),
+    color var(--duration-slow) var(--ease-luxury);
+  overflow-x: hidden;
 }
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+.heading-display {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--text-primary);
+}
+
+.heading-serif {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+.text-label {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   CARD — nổi bật, bo góc mềm đáng yêu, bóng đổ ấm áp
+   ============================================================ */
+.card-luxury {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform var(--duration-base) var(--ease-luxury),
+    box-shadow var(--duration-base) var(--ease-luxury),
+    border-color var(--duration-base) var(--ease-luxury),
+    background-color var(--duration-base) var(--ease-luxury),
+    outline var(--duration-base) var(--ease-luxury);
+}
+
+.card-luxury:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md), 0 0 0 2px var(--accent-light);
+  border-color: var(--accent);
+  background: var(--bg-card-hover);
+  outline: 2px solid var(--accent-light);
+  outline-offset: -1px;
+}
+
+/* ============================================================
+   BUTTONS — Nổi bật với Terracotta & Caramel, đổi màu rõ rệt
+   ============================================================ */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.85rem;
+  background: var(--accent);
+  color: #ffffff;
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--duration-base) var(--ease-luxury);
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(204, 74, 101, 0.30);
+}
+
+.btn-primary:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(204, 74, 101, 0.48);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.85rem;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  border: 1.5px solid var(--border-strong);
+  cursor: pointer;
+  transition: all var(--duration-base) var(--ease-luxury);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent-dark);
+  background: var(--accent-light);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: var(--text-secondary);
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-luxury);
+  text-decoration: none;
+  border: none;
+}
+
+.btn-ghost:hover {
+  color: var(--text-primary);
+  background: var(--bg-subtle);
+}
+
+/* ============================================================
+   ACCENT UTILITIES
+   ============================================================ */
+.accent-text { color: var(--accent); }
+.accent-border { border-color: var(--accent); }
+.accent-bg { background: var(--accent-light); }
+
+/* ============================================================
+   DIVIDER
+   ============================================================ */
+.divider-ornament {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--accent);
+}
+
+.divider-ornament::before,
+.divider-ornament::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border-medium);
+}
+
+/* ============================================================
+   SELECTION
+   ============================================================ */
+::selection {
+  background: var(--accent-light);
+  color: var(--text-primary);
+}
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-subtle); }
+::-webkit-scrollbar-thumb {
+  background: var(--brand-taupe);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* ============================================================
+   FOCUS
+   ============================================================ */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+img { max-width: 100%; height: auto; }

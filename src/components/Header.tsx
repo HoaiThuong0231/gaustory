@@ -34,13 +34,14 @@ export function Header() {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500`}
         style={{
           backgroundColor: scrolled
-            ? "color-mix(in srgb, var(--bg-base) 92%, transparent)"
-            : "transparent",
-          backdropFilter: scrolled ? "blur(20px) saturate(180%)" : "none",
-          WebkitBackdropFilter: scrolled ? "blur(20px) saturate(180%)" : "none",
+            ? "color-mix(in srgb, var(--bg-card) 90%, transparent)"
+            : "color-mix(in srgb, var(--bg-card) 40%, transparent)",
+          backdropFilter: "blur(20px) saturate(180%)",
+          WebkitBackdropFilter: "blur(20px) saturate(180%)",
           borderBottom: scrolled
-            ? "1px solid var(--border-light)"
-            : "1px solid transparent",
+            ? "1px solid var(--border-medium)"
+            : "1px solid var(--border-light)",
+          boxShadow: scrolled ? "var(--shadow-sm)" : "none",
         }}
       >
         <div className="max-w-7xl mx-auto px-5 sm:px-8">

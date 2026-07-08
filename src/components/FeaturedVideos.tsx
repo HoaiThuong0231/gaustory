@@ -157,8 +157,8 @@ function VideoCard({
           <div className="flex items-center gap-1.5">
             <ExternalLink size={13} strokeWidth={1.5} color="var(--accent)" />
             <span
-              className="pink-accent-text"
-              style={{ fontSize: "1.125rem" }}
+              className="text-[11px] font-bold tracking-wider uppercase"
+              style={{ fontFamily: "var(--font-body)", color: "var(--accent)" }}
             >
               Xem trên TikTok
             </span>

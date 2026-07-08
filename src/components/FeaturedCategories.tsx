@@ -97,7 +97,8 @@ export function FeaturedCategories() {
                     </span>
                     {cat.url && (
                       <span
-                        className="pink-accent-text opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-1"
+                        className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-1 text-[11px] font-bold tracking-wider uppercase"
+                        style={{ fontFamily: "var(--font-body)", color: "var(--accent)" }}
                       >
                         Xem ngay ↗
                       </span>

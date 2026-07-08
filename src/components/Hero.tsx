@@ -25,7 +25,7 @@ const ctaButtons = [
   {
     id: "shopee",
     label: "Shopee",
-    href: "https://shopee.vn/gausstory",
+    href: "https://collshp.com/meomoonne?view=storefront",
     variant: "secondary" as const,
     icon: <ShoppingBag size={15} strokeWidth={1.5} />,
   },

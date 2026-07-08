@@ -16,8 +16,7 @@ export function BrandCollaboration() {
         <div className="text-center mb-16">
           <AnimatedSection delay={0}>
             <span
-              className="text-label mb-4 block"
-              style={{ color: "var(--accent)" }}
+              className="pink-accent-text mb-4 block"
             >
               Đối tác
             </span>

@@ -157,8 +157,8 @@ function VideoCard({
           <div className="flex items-center gap-1.5">
             <ExternalLink size={13} strokeWidth={1.5} color="var(--accent)" />
             <span
-              className="text-label"
-              style={{ color: "var(--accent)" }}
+              className="pink-accent-text"
+              style={{ fontSize: "1.125rem" }}
             >
               Xem trên TikTok
             </span>
@@ -181,8 +181,7 @@ export function FeaturedVideos() {
         <div className="text-center mb-16">
           <AnimatedSection delay={0}>
             <span
-              className="text-label mb-4 block"
-              style={{ color: "var(--accent)" }}
+              className="pink-accent-text mb-4 block"
             >
               Video nổi bật
             </span>

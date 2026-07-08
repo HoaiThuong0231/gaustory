@@ -25,8 +25,7 @@ export function FeaturedCategories() {
         <div className="text-center mb-16">
           <AnimatedSection delay={0}>
             <span
-              className="text-label mb-4 block"
-              style={{ color: "var(--accent)" }}
+              className="pink-accent-text mb-4 block"
             >
               Nội dung
             </span>
@@ -92,15 +91,13 @@ export function FeaturedCategories() {
                   {/* Tag + arrow */}
                   <div className="flex items-center justify-between mb-3">
                     <span
-                      className="text-label"
-                      style={{ color: "var(--accent)" }}
+                      className="pink-accent-text"
                     >
                       {cat.tag}
                     </span>
                     {cat.url && (
                       <span
-                        className="text-label opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-1"
-                        style={{ color: "var(--accent)" }}
+                        className="pink-accent-text opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-1"
                       >
                         Xem ngay ↗
                       </span>

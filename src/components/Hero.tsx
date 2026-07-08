@@ -129,8 +129,7 @@ export function Hero() {
         {/* Brand label */}
         <motion.div variants={item}>
           <span
-            className="text-label inline-block mb-8"
-            style={{ color: "var(--accent)" }}
+            className="pink-accent-text inline-block mb-8"
           >
             ✦ &nbsp; Câu chuyện của Gấu &nbsp; ✦
           </span>
@@ -181,11 +180,11 @@ export function Hero() {
         {/* Tagline */}
         <motion.p
           variants={item}
-          className="heading-serif mb-6"
+          className="heading-serif mb-6 font-great-vibes"
           style={{
-            fontSize: "clamp(1rem, 2.5vw, 1.375rem)",
-            color: "var(--brand-taupe)",
-            fontStyle: "italic",
+            fontSize: "clamp(2rem, 4vw, 3rem)",
+            color: "var(--accent)",
+            fontStyle: "normal",
           }}
         >
           Growing with Gấu, Sharing with Love.

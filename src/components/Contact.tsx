@@ -144,8 +144,7 @@ export function Contact() {
         <div className="text-center mb-16">
           <AnimatedSection delay={0}>
             <span
-              className="text-label mb-4 block"
-              style={{ color: "var(--accent)" }}
+              className="pink-accent-text mb-4 block"
             >
               Hợp tác
             </span>
@@ -279,9 +278,8 @@ export function Contact() {
                     }}
                   >
                     <div>
-                      <span
-                        className="text-label mb-2 block"
-                        style={{ color: "var(--accent)" }}
+                       <span
+                        className="pink-accent-text mb-2 block"
                       >
                         Media Kit
                       </span>
@@ -329,8 +327,7 @@ export function Contact() {
                       chân thật với cộng đồng của mình.&rdquo;
                     </p>
                     <p
-                      className="text-label"
-                      style={{ color: "var(--accent)" }}
+                      className="pink-accent-text"
                     >
                       — Mẹ Gấu
                     </p>

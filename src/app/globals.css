@@ -140,8 +140,9 @@
   --color-border-medium: var(--border-medium);
   --color-border-strong: var(--border-strong);
 
-  --font-heading: var(--font-cormorant), var(--font-playfair), Georgia, serif;
-  --font-body: var(--font-inter), var(--font-be-vietnam), system-ui, sans-serif;
+  --font-heading: var(--font-cookie), var(--font-playfair), Georgia, serif;
+  --font-body: var(--font-dm-sans), system-ui, sans-serif;
+  --font-great-vibes: var(--font-great-vibes), cursive;
 
   --shadow-luxury-xs: var(--shadow-xs);
   --shadow-luxury-sm: var(--shadow-sm);
@@ -307,9 +308,26 @@ body {
 /* ============================================================
    ACCENT UTILITIES
    ============================================================ */
-.accent-text { color: var(--accent); }
+.accent-text {
+  color: var(--accent);
+}
 .accent-border { border-color: var(--accent); }
 .accent-bg { background: var(--accent-light); }
+
+.pink-accent-text {
+  color: var(--accent) !important;
+  font-family: var(--font-great-vibes), cursive !important;
+  font-size: clamp(1.375rem, 2.5vw, 2rem) !important;
+  font-weight: 400 !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  line-height: 1.2 !important;
+  display: inline-block;
+}
+
+.font-great-vibes {
+  font-family: var(--font-great-vibes), cursive !important;
+}
 
 /* ============================================================
    DIVIDER

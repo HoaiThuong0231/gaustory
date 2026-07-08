@@ -33,8 +33,7 @@ export function About() {
           <div>
             <AnimatedSection delay={0}>
               <span
-                className="text-label mb-4 block"
-                style={{ color: "var(--accent)" }}
+                className="pink-accent-text mb-4 block"
               >
                 Về Gấu&apos;s Story
               </span>
@@ -87,8 +86,8 @@ export function About() {
             <AnimatedSection delay={0.25}>
               <div className="divider-ornament mb-8">
                 <span
-                  className="text-label"
-                  style={{ color: "var(--accent)", whiteSpace: "nowrap" }}
+                  className="pink-accent-text"
+                  style={{ whiteSpace: "nowrap" }}
                 >
                   Giá trị cốt lõi
                 </span>
@@ -182,8 +181,7 @@ export function About() {
                   trân trọng.&rdquo;
                 </p>
                 <p
-                  className="text-label"
-                  style={{ color: "var(--accent)" }}
+                  className="pink-accent-text"
                 >
                   — Mẹ Gấu
                 </p>

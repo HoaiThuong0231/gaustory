@@ -1,39 +1,31 @@
 import type { Metadata, Viewport } from "next";
 import {
-  Cormorant_Garamond,
-  Inter,
-  Be_Vietnam_Pro,
-  Playfair_Display,
+  DM_Sans,
+  Great_Vibes,
+  Cookie,
 } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { siteConfig } from "@/data/site";
 
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-cormorant",
+const dmSans = DM_Sans({
+  subsets: ["latin", "latin-ext"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-dm-sans",
   display: "swap",
 });
 
-const playfair = Playfair_Display({
+const greatVibes = Great_Vibes({
   subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-playfair",
+  weight: ["400"],
+  variable: "--font-great-vibes",
   display: "swap",
 });
 
-const inter = Inter({
+const cookie = Cookie({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const beVietnam = Be_Vietnam_Pro({
-  subsets: ["latin", "vietnamese"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-be-vietnam",
+  weight: ["400"],
+  variable: "--font-cookie",
   display: "swap",
 });
 
@@ -92,7 +84,7 @@ export default function RootLayout({
     <html
       lang="vi"
       suppressHydrationWarning
-      className={`${cormorant.variable} ${playfair.variable} ${inter.variable} ${beVietnam.variable}`}
+      className={`${dmSans.variable} ${greatVibes.variable} ${cookie.variable}`}
     >
       <body>
         <ThemeProvider>{children}</ThemeProvider>

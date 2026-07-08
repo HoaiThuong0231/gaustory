@@ -182,7 +182,7 @@ export function Hero() {
           variants={item}
           className="heading-serif mb-6 font-great-vibes"
           style={{
-            fontSize: "clamp(2rem, 4vw, 3rem)",
+            fontSize: "clamp(1.25rem, 2.5vw, 1.875rem)",
             color: "var(--accent)",
             fontStyle: "normal",
           }}

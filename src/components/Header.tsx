@@ -53,10 +53,10 @@ export function Header() {
                 className="w-9 h-9 rounded-full object-cover border border-[var(--border-medium)] shadow-xs transition-transform duration-300 group-hover:scale-105"
               />
               <span
-                className="text-sm font-medium tracking-wide transition-colors duration-200 group-hover:text-[var(--brand-taupe)]"
+                className="text-sm font-medium tracking-wide transition-colors duration-200 group-hover:text-[var(--accent)]"
                 style={{
                   color: "var(--text-primary)",
-                  fontFamily: "var(--font-body)",
+                  fontFamily: "var(--font-coiny)",
                   letterSpacing: "0.04em",
                 }}
               >

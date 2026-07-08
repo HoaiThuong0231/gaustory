@@ -172,6 +172,7 @@ export function Hero() {
           style={{
             fontSize: "clamp(3rem, 8vw, 5.5rem)",
             color: "var(--text-primary)",
+            fontFamily: "var(--font-coiny)",
           }}
         >
           Gấu&apos;s Story

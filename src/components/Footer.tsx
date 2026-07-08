@@ -34,7 +34,7 @@ export function Footer() {
                 style={{
                   color: "var(--text-secondary)",
                   letterSpacing: "0.04em",
-                  fontFamily: "var(--font-body)",
+                  fontFamily: "var(--font-coiny)",
                 }}
               >
                 Gấu&apos;s Story

@@ -3,6 +3,7 @@ import {
   DM_Sans,
   Great_Vibes,
   Cookie,
+  Coiny,
 } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -26,6 +27,13 @@ const cookie = Cookie({
   subsets: ["latin"],
   weight: ["400"],
   variable: "--font-cookie",
+  display: "swap",
+});
+
+const coiny = Coiny({
+  subsets: ["latin", "vietnamese"],
+  weight: ["400"],
+  variable: "--font-coiny",
   display: "swap",
 });
 
@@ -84,7 +92,7 @@ export default function RootLayout({
     <html
       lang="vi"
       suppressHydrationWarning
-      className={`${dmSans.variable} ${greatVibes.variable} ${cookie.variable}`}
+      className={`${dmSans.variable} ${greatVibes.variable} ${cookie.variable} ${coiny.variable}`}
     >
       <body>
         <ThemeProvider>{children}</ThemeProvider>

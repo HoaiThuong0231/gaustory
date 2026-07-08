@@ -143,6 +143,7 @@
   --font-heading: var(--font-cookie), var(--font-playfair), Georgia, serif;
   --font-body: var(--font-dm-sans), system-ui, sans-serif;
   --font-great-vibes: var(--font-great-vibes), cursive;
+  --font-coiny: var(--font-coiny), sans-serif;
 
   --shadow-luxury-xs: var(--shadow-xs);
   --shadow-luxury-sm: var(--shadow-sm);
@@ -316,12 +317,12 @@ body {
 
 .pink-accent-text {
   color: var(--accent) !important;
-  font-family: var(--font-great-vibes), cursive !important;
-  font-size: clamp(1.375rem, 2.5vw, 2rem) !important;
+  font-family: var(--font-coiny), sans-serif !important;
+  font-size: clamp(1rem, 2vw, 1.375rem) !important;
   font-weight: 400 !important;
   text-transform: none !important;
-  letter-spacing: normal !important;
-  line-height: 1.2 !important;
+  letter-spacing: 0.02em !important;
+  line-height: 1.3 !important;
   display: inline-block;
 }
 

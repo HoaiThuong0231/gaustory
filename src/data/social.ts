@@ -23,7 +23,7 @@ export const socialLinks: SocialLink[] = [
     platform: "Facebook",
     handle: "Gấu's Story",
     description: "Cập nhật mới nhất từ Mẹ Gấu",
-    url: "https://www.facebook.com/share/195PjnQ8oc/?mibextid=wwXIfr",
+    url: "https://facebook.com/gausstory",
     icon: "Facebook",
     color: "#1877F2",
   },

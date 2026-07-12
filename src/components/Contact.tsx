@@ -253,7 +253,7 @@ export function Contact() {
                             className="text-xs truncate"
                             style={{ color: "var(--text-muted)" }}
                           >
-                            {social.handle}
+                            {social.id !== "zalo" && social.handle}
                           </p>
                         </div>
                         <ExternalLink

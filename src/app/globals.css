@@ -1,49 +1,49 @@
 @import "tailwindcss";
 
 /* ============================================================
-   DESIGN TOKENS — Gấu's Story · Pastel Dreamy (High Contrast)
-   Peach Cream, Pastel Pink, Sky Blue, Lavender, Mint, Yellow
+   DESIGN TOKENS — Gấu's Story · Pastel Sky Blue (Boy Theme)
+   Sky Blue, Baby Blue, Periwinkle, Mint, Soft White
    ============================================================ */
 :root {
-  /* Background — Nền đào đậm hơn để tăng tương phản */
-  --bg-base: #F9D4B0;       /* Deep Peach Cream — đủ đậm để tương phản rõ */
-  --bg-subtle: #F5C89A;     /* Deeper Warm Peach — section xen kẽ, đậm hơn rõ */
-  --bg-alt: #FCDFC2;        /* Soft Peach Alt — xen kẽ nhẹ hơn */
-  --bg-card: #FFFBF7;       /* Card trắng ngà — nổi bật rõ trên nền đào đậm */
-  --bg-card-hover: #FFF0E8; /* Hover kem hồng rõ */
+  /* Background — Nền xanh pastel nhẹ nhàng, dễ chịu */
+  --bg-base: #EBF5FF;       /* Baby Blue — nền chính xanh pastel */
+  --bg-subtle: #D6ECFF;     /* Deeper Sky Blue — section xen kẽ */
+  --bg-alt: #F0F8FF;        /* Alice Blue — xen kẽ nhẹ hơn */
+  --bg-card: #FFFFFF;       /* Card trắng tinh — nổi bật rõ trên nền xanh */
+  --bg-card-hover: #F0F8FF; /* Hover xanh nhạt */
 
-  /* Text — Plum gần đen, tương phản cao trên nền pastel đào */
-  --text-primary: #1E0F1A;  /* Near-black Plum — tương phản tối đa */
-  --text-secondary: #4A2840;/* Dark Plum — đủ đậm, dễ đọc */
-  --text-muted: #7A5570;    /* Medium Mauve — rõ hơn trước */
-  --text-inverse: #FFFBF8;  /* Chữ sáng trên nền CTA */
+  /* Text — Navy đậm, tương phản cao trên nền xanh pastel */
+  --text-primary: #0D1F3C;  /* Deep Navy — tương phản tối đa */
+  --text-secondary: #1E4070;/* Ocean Blue — đủ đậm, dễ đọc */
+  --text-muted: #4A7BAF;    /* Medium Blue Grey — rõ ràng */
+  --text-inverse: #FFFFFF;  /* Chữ trắng trên nền CTA */
 
-  /* Brand Colors — Pastel palette từ bảng màu (giữ nguyên) */
-  --brand-pink: #FFB3C1;    /* Pastel Pink */
-  --brand-blue: #B3D9FF;    /* Pastel Sky Blue */
-  --brand-lavender: #C8B3FF;/* Pastel Lavender */
-  --brand-mint: #B3F0D9;    /* Pastel Mint */
-  --brand-yellow: #FEFBB3;  /* Pastel Yellow */
+  /* Brand Colors — Pastel blue boy palette */
+  --brand-pink: #A8D8FF;    /* Baby Blue */
+  --brand-blue: #5BA3E0;    /* Cornflower Blue */
+  --brand-lavender: #B8C8FF;/* Periwinkle */
+  --brand-mint: #A8F0E0;    /* Aqua Mint */
+  --brand-yellow: #FFF3A8;  /* Soft Lemon */
 
-  /* Accent — Rose đậm hơn để nút CTA nổi bật trên nền đào */
-  --accent: #CC4A65;        /* Deep Rose — WCAG AA compliant, đủ đậm */
-  --accent-light: #FCCDD6;  /* Tint hồng nhạt cho hover bg */
-  --accent-dark: #A03350;   /* Darker Rose — hover state */
+  /* Accent — Sky Blue đậm, nổi bật, CTA rõ ràng */
+  --accent: #1A7FD4;        /* Vivid Sky Blue — WCAG AA compliant */
+  --accent-light: #C8E6FF;  /* Tint xanh nhạt cho hover bg */
+  --accent-dark: #0F5FA8;   /* Darker Blue — hover state */
 
   /* Tông đồng hành */
-  --accent-sage: #3D9E7A;   /* Deeper Mint Green — tương phản tốt */
-  --accent-gold: #5B9ED4;   /* Deeper Sky Blue — đủ đậm để dùng làm icon */
+  --accent-sage: #2BA8A0;   /* Teal Aqua — tươi mát */
+  --accent-gold: #5BA3E0;   /* Cornflower — icon màu xanh */
 
-  /* Border — Đậm rõ hơn để tách biệt các vùng */
-  --border-light: rgba(30, 15, 26, 0.14);
-  --border-medium: rgba(30, 15, 26, 0.25);
-  --border-strong: rgba(204, 74, 101, 0.55);
+  /* Border — xanh nhạt tinh tế */
+  --border-light: rgba(13, 31, 60, 0.10);
+  --border-medium: rgba(13, 31, 60, 0.18);
+  --border-strong: rgba(26, 127, 212, 0.50);
 
-  /* Shadow — Bóng đổ đậm hơn, tạo chiều sâu rõ */
-  --shadow-xs: 0 1px 4px rgba(30, 15, 26, 0.12);
-  --shadow-sm: 0 4px 16px rgba(30, 15, 26, 0.14), 0 1px 4px rgba(30, 15, 26, 0.08);
-  --shadow-md: 0 10px 32px rgba(30, 15, 26, 0.18), 0 4px 12px rgba(30, 15, 26, 0.10);
-  --shadow-lg: 0 24px 54px rgba(30, 15, 26, 0.22), 0 8px 22px rgba(30, 15, 26, 0.12);
+  /* Shadow — bóng xanh nhẹ */
+  --shadow-xs: 0 1px 4px rgba(26, 127, 212, 0.10);
+  --shadow-sm: 0 4px 16px rgba(26, 127, 212, 0.12), 0 1px 4px rgba(13, 31, 60, 0.08);
+  --shadow-md: 0 10px 32px rgba(26, 127, 212, 0.16), 0 4px 12px rgba(13, 31, 60, 0.10);
+  --shadow-lg: 0 24px 54px rgba(26, 127, 212, 0.20), 0 8px 22px rgba(13, 31, 60, 0.12);
 
   /* Radius */
   --radius-sm: 10px;
@@ -60,47 +60,47 @@
 }
 
 /* ============================================================
-   DARK MODE — Deep Dreamy Night / Midnight Plum
-   Phù hợp với pastel: nền tím than, text kem nhạt, accent hồng sáng
+   DARK MODE — Deep Ocean Blue / Midnight Navy
+   Nền xanh dương đậm sâu, text xanh trắng nhạt, accent xanh sáng
    ============================================================ */
 .dark {
-  /* Nền tối tông tím than / midnight, hài hoà với pastel */
-  --bg-base: #1A1420;       /* Midnight Plum — tím than sâu */
-  --bg-subtle: #221829;     /* Deep Violet Slate */
-  --bg-alt: #1E1724;        /* Dark Lavender Slate xen kẽ */
-  --bg-card: #2E2240;       /* Rich Plum Card */
-  --bg-card-hover: #3A2B50; /* Hover Plum sáng hơn */
+  /* Nền tối tông xanh dương đậm, hài hoà với theme xanh */
+  --bg-base: #071628;       /* Midnight Navy — xanh đen sâu */
+  --bg-subtle: #0C2040;     /* Deep Ocean — xen kẽ đậm hơn */
+  --bg-alt: #091C35;        /* Dark Steel Blue xen kẽ */
+  --bg-card: #0F2A48;       /* Rich Navy Card */
+  --bg-card-hover: #163860; /* Hover Navy sáng hơn */
 
-  /* Chữ kem lavender sáng rõ ràng, tương phản tốt */
-  --text-primary: #F5EEFF;  /* Lavender Cream */
-  --text-secondary: #D8C8EE;/* Soft Lavender */
-  --text-muted: #A090BE;    /* Muted Lilac */
-  --text-inverse: #1A1420;
+  /* Chữ xanh-trắng sáng rõ ràng, tương phản tốt */
+  --text-primary: #E8F4FF;  /* Ice Blue White — tương phản max */
+  --text-secondary: #B8D8F8;/* Soft Sky — dễ đọc */
+  --text-muted: #6FA8D8;    /* Muted Cornflower */
+  --text-inverse: #071628;
 
-  /* Brand — pastel sáng hơn cho dark */
-  --brand-pink: #FFB3C1;
-  --brand-blue: #B3D9FF;
-  --brand-lavender: #D4BFFF;
-  --brand-mint: #B3F0D9;
-  --brand-yellow: #FEFBB3;
+  /* Brand — pastel xanh sáng hơn cho dark */
+  --brand-pink: #90C8FF;    /* Bright Baby Blue */
+  --brand-blue: #60AFFF;    /* Bright Cornflower */
+  --brand-lavender: #A0B8FF;/* Bright Periwinkle */
+  --brand-mint: #80E8D8;    /* Bright Aqua */
+  --brand-yellow: #FFF0A0;  /* Bright Lemon */
 
-  /* Accent — hồng sáng rực rỡ trong dark mode */
-  --accent: #FF8FA3;        /* Bright Pastel Rose */
-  --accent-light: rgba(255, 143, 163, 0.18);
-  --accent-dark: #FFB3C4;   /* Lighter Rose hover */
+  /* Accent — xanh sáng rực rỡ trong dark mode */
+  --accent: #4DB8FF;        /* Electric Sky Blue */
+  --accent-light: rgba(77, 184, 255, 0.18);
+  --accent-dark: #80CCFF;   /* Lighter Blue hover */
 
-  --accent-sage: #7ECBA8;
-  --accent-gold: #B3D9FF;
+  --accent-sage: #40D8C8;   /* Bright Teal */
+  --accent-gold: #60AFFF;   /* Bright Cornflower */
 
-  /* Border — tím nhạt tinh tế */
-  --border-light: rgba(245, 238, 255, 0.08);
-  --border-medium: rgba(245, 238, 255, 0.15);
-  --border-strong: rgba(255, 143, 163, 0.50);
+  /* Border — xanh đậm tinh tế */
+  --border-light: rgba(232, 244, 255, 0.08);
+  --border-medium: rgba(232, 244, 255, 0.15);
+  --border-strong: rgba(77, 184, 255, 0.45);
 
-  --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.5);
-  --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.45), 0 1px 3px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.55), 0 2px 8px rgba(0, 0, 0, 0.35);
-  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.65), 0 0 40px rgba(255, 143, 163, 0.10);
+  --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.6);
+  --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.50), 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.60), 0 2px 8px rgba(77, 184, 255, 0.12);
+  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.70), 0 0 40px rgba(77, 184, 255, 0.15);
 }
 
 /* ============================================================
@@ -204,28 +204,83 @@ body {
 }
 
 /* ============================================================
-   CARD — nổi bật, bo góc mềm đáng yêu, bóng đổ ấm áp
+   CARD — nổi bật, bo góc mềm, bóng đổ ấm áp
    ============================================================ */
 .card-luxury {
   background: var(--bg-card);
-  border: 1.5px solid var(--border-medium);
+  border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
   transition:
-    transform var(--duration-base) var(--ease-luxury),
-    box-shadow var(--duration-base) var(--ease-luxury),
-    border-color var(--duration-base) var(--ease-luxury),
-    background-color var(--duration-base) var(--ease-luxury),
-    outline var(--duration-base) var(--ease-luxury);
+    transform 400ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 400ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 400ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 400ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, box-shadow;
 }
 
 .card-luxury:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-md), 0 0 0 2px var(--accent-light);
-  border-color: var(--accent);
+  transform: translateY(-6px) scale(1.012);
+  border-color: transparent;
   background: var(--bg-card-hover);
-  outline: 2px solid var(--accent-light);
-  outline-offset: -1px;
+  box-shadow:
+    0 0 0 1.5px color-mix(in srgb, var(--accent) 60%, transparent),
+    0 0 18px 4px color-mix(in srgb, var(--accent) 28%, transparent),
+    0 0 48px 12px color-mix(in srgb, var(--accent) 12%, transparent),
+    var(--shadow-md);
+}
+
+/* Neon card — dùng cho category cards */
+.card-neon {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 400ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 400ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 400ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 400ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, box-shadow;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-neon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    ellipse 80% 50% at 50% 0%,
+    color-mix(in srgb, var(--accent) 8%, transparent),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 400ms cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.card-neon:hover::before {
+  opacity: 1;
+}
+
+.card-neon > * {
+  position: relative;
+  z-index: 1;
+}
+
+.card-neon:hover {
+  transform: translateY(-7px) scale(1.015);
+  border-color: transparent;
+  background: var(--bg-card-hover);
+  box-shadow:
+    0 0 0 1.5px color-mix(in srgb, var(--accent) 70%, transparent),
+    0 0 20px 5px color-mix(in srgb, var(--accent) 30%, transparent),
+    0 0 55px 15px color-mix(in srgb, var(--accent) 14%, transparent),
+    0 0 90px 25px color-mix(in srgb, var(--accent) 6%, transparent),
+    var(--shadow-lg);
 }
 
 /* ============================================================
@@ -239,7 +294,7 @@ body {
   background: var(--accent);
   color: #ffffff;
   border-radius: var(--radius-full);
-  font-family: var(--font-body);
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -248,13 +303,13 @@ body {
   transition: all var(--duration-base) var(--ease-luxury);
   text-decoration: none;
   white-space: nowrap;
-  box-shadow: 0 4px 14px rgba(204, 74, 101, 0.30);
+  box-shadow: 0 4px 14px rgba(26, 127, 212, 0.35);
 }
 
 .btn-primary:hover {
   background: var(--accent-dark);
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 8px 24px rgba(204, 74, 101, 0.48);
+  box-shadow: 0 8px 28px rgba(26, 127, 212, 0.55);
 }
 
 .btn-secondary {
@@ -262,26 +317,39 @@ body {
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.85rem;
-  background: var(--bg-card);
+  background: color-mix(in srgb, var(--bg-card) 60%, transparent);
   color: var(--text-primary);
   border-radius: var(--radius-full);
-  font-family: var(--font-body);
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.03em;
-  border: 1.5px solid var(--border-strong);
+  border: 1.5px solid var(--border-medium);
   cursor: pointer;
-  transition: all var(--duration-base) var(--ease-luxury);
+  transition:
+    background 350ms cubic-bezier(0.22, 1, 0.36, 1),
+    color 350ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 350ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 350ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
   text-decoration: none;
   white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .btn-secondary:hover {
-  border-color: var(--accent);
-  color: var(--accent-dark);
-  background: var(--accent-light);
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: var(--shadow-sm);
+  background: var(--accent);
+  color: #ffffff;
+  border-color: transparent;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--accent) 80%, transparent),
+    0 0 16px 4px color-mix(in srgb, var(--accent) 35%, transparent),
+    0 0 40px 10px color-mix(in srgb, var(--accent) 15%, transparent),
+    0 8px 24px rgba(26, 127, 212, 0.40);
 }
 
 .btn-ghost {
@@ -292,7 +360,7 @@ body {
   background: transparent;
   color: var(--text-secondary);
   border-radius: var(--radius-full);
-  font-family: var(--font-body);
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
   cursor: pointer;
@@ -362,7 +430,7 @@ body {
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg-subtle); }
 ::-webkit-scrollbar-thumb {
-  background: var(--brand-taupe);
+  background: var(--brand-blue);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover { background: var(--accent); }

@@ -12,7 +12,13 @@ export function ThemeToggle() {
     <button
       onClick={toggleTheme}
       aria-label={isDark ? "Chuyển sang Light Mode" : "Chuyển sang Dark Mode"}
-      className="relative w-9 h-9 flex items-center justify-center rounded-full border border-[var(--border-medium)] bg-[var(--bg-card)] transition-all duration-300 hover:border-[var(--brand-taupe)] hover:bg-[var(--bg-subtle)] cursor-pointer"
+      className="relative w-9 h-9 flex items-center justify-center rounded-full border-none cursor-pointer transition-all duration-300"
+      style={{
+        background: isDark ? "#ffffff" : "var(--accent)",
+        boxShadow: isDark
+          ? "0 0 10px 2px rgba(255,255,255,0.15)"
+          : "0 0 10px 2px rgba(26,127,212,0.30)",
+      }}
     >
       <AnimatePresence mode="wait" initial={false}>
         {isDark ? (
@@ -24,7 +30,7 @@ export function ThemeToggle() {
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
             className="absolute"
           >
-            <Sun size={15} strokeWidth={1.5} color="var(--accent)" />
+            <Sun size={16} strokeWidth={1.8} color="var(--accent)" />
           </motion.span>
         ) : (
           <motion.span
@@ -35,7 +41,7 @@ export function ThemeToggle() {
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
             className="absolute"
           >
-            <Moon size={15} strokeWidth={1.5} color="var(--text-secondary)" />
+            <Moon size={16} strokeWidth={1.8} color="#ffffff" />
           </motion.span>
         )}
       </AnimatePresence>

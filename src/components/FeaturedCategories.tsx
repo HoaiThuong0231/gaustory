@@ -73,9 +73,9 @@ export function FeaturedCategories() {
               <AnimatedSection key={cat.id} delay={0.1 * idx} direction="up">
                 <Tag
                   {...(linkProps as object)}
-                  className={`card-luxury p-7 h-full group ${cat.url ? "cursor-pointer" : "cursor-default"} block`}
-                  whileHover={{ y: -4 }}
-                  transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] as const }}
+                  className={`card-neon p-7 h-full group ${cat.url ? "cursor-pointer" : "cursor-default"} block`}
+                  whileHover={{ y: -7, scale: 1.015 }}
+                  transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] as const }}
                 >
                   {/* Icon */}
                   <div

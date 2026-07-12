@@ -50,7 +50,7 @@ export function Footer() {
 
             <p
               className="text-xs"
-              style={{ color: "var(--text-muted)", letterSpacing: "0.03em" }}
+              style={{ color: "var(--text-muted)", letterSpacing: "0.03em", fontFamily: "Arial, Helvetica, sans-serif" }}
             >
               © {currentYear} Gấu&apos;s Story. All rights reserved.
             </p>
@@ -58,7 +58,7 @@ export function Footer() {
             <Link
               href="/privacy"
               className="text-xs transition-colors duration-200 hover:text-[var(--brand-taupe)]"
-              style={{ color: "var(--text-muted)", letterSpacing: "0.03em" }}
+              style={{ color: "var(--text-muted)", letterSpacing: "0.03em", fontFamily: "Arial, Helvetica, sans-serif" }}
             >
               Privacy Policy
             </Link>
@@ -79,7 +79,7 @@ export function Footer() {
           >
             <span
               className="text-xs transition-colors duration-200 group-hover:text-[var(--brand-taupe)]"
-              style={{ color: "var(--text-muted)", letterSpacing: "0.06em", textTransform: "uppercase", fontSize: "0.7rem", fontWeight: 500 }}
+              style={{ color: "var(--text-muted)", letterSpacing: "0.06em", textTransform: "uppercase", fontSize: "0.7rem", fontWeight: 500, fontFamily: "Arial, Helvetica, sans-serif" }}
             >
               Lên đầu trang
             </span>

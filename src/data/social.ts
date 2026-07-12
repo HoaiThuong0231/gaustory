@@ -31,7 +31,7 @@ export const socialLinks: SocialLink[] = [
   {
     id: "shopee",
     platform: "Shopee",
-    handle: "Gấu's Story Shop",
+    handle: "Gấu's Story Collection",
     description: "Những sản phẩm Mẹ Gấu tin dùng và giới thiệu",
     url: "https://collshp.com/meomoonne?view=storefront",
     icon: "ShoppingBag",

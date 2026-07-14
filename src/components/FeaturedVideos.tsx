@@ -24,12 +24,12 @@ function VideoCard({
   const emojis = ["🍲", "☀️", "🧴"];
 
   return (
-    <AnimatedSection delay={0.1 * index} direction="up">
+    <AnimatedSection delay={0.1 * index} direction="up" className="h-full">
       <motion.a
         href={video.tiktokUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="block group rounded-3xl overflow-hidden cursor-pointer"
+        className="flex flex-col h-full group rounded-3xl overflow-hidden cursor-pointer"
         style={{
           background: "var(--bg-card)",
           border: "1.5px solid var(--border-medium)",
@@ -131,7 +131,7 @@ function VideoCard({
         </div>
 
         {/* Content */}
-        <div className="p-6">
+        <div className="p-6 flex flex-col flex-1">
           <h3
             className="mb-2 font-medium transition-colors duration-200 group-hover:text-[var(--accent)]"
             style={{
@@ -145,7 +145,7 @@ function VideoCard({
             {video.title}
           </h3>
           <p
-            className="mb-4"
+            className="mb-4 flex-1"
             style={{
               color: "var(--text-muted)",
               fontSize: "0.875rem",
@@ -213,7 +213,7 @@ export function FeaturedVideos() {
         </div>
 
         {/* Videos Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
           {featuredVideos.map((video, idx) => (
             <VideoCard key={video.id} video={video} index={idx} />
           ))}

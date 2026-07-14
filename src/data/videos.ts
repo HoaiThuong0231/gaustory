@@ -29,7 +29,7 @@ export const featuredVideos: FeaturedVideo[] = [
   },
   {
     id: "video-3",
-    title: "Review sữa tắm cho bé dưới 6 tháng",
+    title: "Review sản phẩm mẹ Gấu tin dùng",
     description:
       "Review tất cả sản phẩm mẹ Gấu tin dùng cho Gấu — trải nghiệm thật, đánh giá thật, không quảng cáo.",
     thumbnail: "/images/video-thumb-3.jpg",

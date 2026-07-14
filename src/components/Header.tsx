@@ -56,7 +56,7 @@ export function Header() {
               <span
                 className="text-sm font-medium tracking-wide transition-colors duration-200 group-hover:text-[var(--accent)]"
                 style={{
-                  color: "#0A4A8A",
+                  color: "var(--text-secondary)",
                   fontFamily: "var(--font-coiny)",
                   letterSpacing: "0.04em",
                 }}

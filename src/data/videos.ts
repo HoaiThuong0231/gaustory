@@ -31,7 +31,7 @@ export const featuredVideos: FeaturedVideo[] = [
     id: "video-3",
     title: "Review sữa tắm cho bé dưới 6 tháng",
     description:
-      "Review những sản phẩm Gấu dùng — chỉ những gì Mẹ Gấu thực sự tin tưởng mới được chia sẻ.",
+      "Review tất cả sản phẩm mẹ Gấu tin dùng cho Gấu — trải nghiệm thật, đánh giá thật, không quảng cáo.",
     thumbnail: "/images/video-thumb-3.jpg",
     tiktokUrl: "https://tiktok.com/@gaustory",
     category: "Review sản phẩm",

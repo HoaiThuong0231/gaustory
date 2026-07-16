@@ -38,33 +38,16 @@ const iconComponents: Record<string, React.ReactNode> = {
 };
 
 function CopyEmailButton({ email }: { email: string }) {
-  const [copied, setCopied] = useState(false);
-
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(email);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch {
-      // fallback
-      const el = document.createElement("textarea");
-      el.value = email;
-      document.body.appendChild(el);
-      el.select();
-      document.execCommand("copy");
-      document.body.removeChild(el);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    }
-  };
-
   return (
-    <button
-      onClick={handleCopy}
+    <a
+      href={`https://mail.google.com/mail/?view=cm&fs=1&to=${email}`}
+      target="_blank"
+      rel="noopener noreferrer"
       className="group flex items-center gap-3 w-full text-left p-4 rounded-2xl transition-all duration-300 cursor-pointer"
       style={{
         background: "var(--bg-subtle)",
         border: "1px solid var(--border-light)",
+        textDecoration: "none",
       }}
       onMouseEnter={(e) => {
         (e.currentTarget as HTMLElement).style.borderColor =
@@ -95,40 +78,14 @@ function CopyEmailButton({ email }: { email: string }) {
           {email}
         </p>
       </div>
-      <motion.div
-        className="flex items-center gap-1.5 flex-shrink-0"
+      <div
+        className="flex items-center gap-1.5 flex-shrink-0 transition-colors duration-200 group-hover:text-[var(--accent)]"
         style={{ color: "var(--text-muted)" }}
       >
-        <AnimatePresence mode="wait" initial={false}>
-          {copied ? (
-            <motion.span
-              key="check"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.8 }}
-              transition={{ duration: 0.2 }}
-              className="flex items-center gap-1.5"
-              style={{ color: "var(--accent)" }}
-            >
-              <Check size={14} strokeWidth={2} />
-              <span className="text-label text-xs">Đã sao chép</span>
-            </motion.span>
-          ) : (
-            <motion.span
-              key="copy"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.8 }}
-              transition={{ duration: 0.2 }}
-              className="flex items-center gap-1.5 transition-colors duration-200 group-hover:text-[var(--brand-taupe)]"
-            >
-              <Copy size={14} strokeWidth={1.5} />
-              <span className="text-label text-xs">Sao chép</span>
-            </motion.span>
-          )}
-        </AnimatePresence>
-      </motion.div>
-    </button>
+        <ExternalLink size={14} strokeWidth={1.5} />
+        <span className="text-label text-xs">Gửi Gmail</span>
+      </div>
+    </a>
   );
 }
 

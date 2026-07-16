@@ -43,14 +43,14 @@ export const metadata: Metadata = {
     template: "%s | Gấu's Story",
   },
   description:
-    "Lưu giữ hành trình lớn lên của Gấu và chia sẻ những trải nghiệm chân thật về nuôi con cùng những sản phẩm Mẹ Gấu thực sự tin dùng.",
+    "Mẹ bỉm thông thái — nuôi con đủ đầy mà vẫn tối ưu chi phí. Gấu's Story chia sẻ những sản phẩm thực sự dùng được, review thật từ trải nghiệm thật, giúp mẹ chọn đúng — không mua thừa, không bỏ lỡ.",
   keywords: [...siteConfig.keywords],
   authors: [{ name: siteConfig.author.name }],
   creator: siteConfig.author.name,
   openGraph: {
     title: "Gấu's Story — Growing with Gấu, Sharing with Love",
     description:
-      "Lưu giữ hành trình lớn lên của Gấu và chia sẻ những trải nghiệm chân thật về nuôi con.",
+      "Mẹ bỉm thông thái — nuôi con đủ đầy mà vẫn tối ưu chi phí. Review sản phẩm thật, chọn đúng từ lần đầu, không mua thừa.",
     url: siteConfig.url,
     siteName: siteConfig.name,
     locale: siteConfig.locale,
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Gấu's Story",
-    description: "Growing with Gấu, Sharing with Love.",
+    description: "Mẹ bỉm thông thái — nuôi con đủ đầy, tối ưu chi phí.",
     creator: siteConfig.author.handle,
   },
   robots: {

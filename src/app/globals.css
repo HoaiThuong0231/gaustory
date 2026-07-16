@@ -68,13 +68,13 @@
   --bg-base: #071628;       /* Midnight Navy — xanh đen sâu */
   --bg-subtle: #0C2040;     /* Deep Ocean — xen kẽ đậm hơn */
   --bg-alt: #091C35;        /* Dark Steel Blue xen kẽ */
-  --bg-card: #0F2A48;       /* Rich Navy Card */
-  --bg-card-hover: #163860; /* Hover Navy sáng hơn */
+  --bg-card: #0D223C;       /* Navy Card đủ tối để chữ trắng & cyan nổi bật rực rỡ */
+  --bg-card-hover: #133052; /* Hover Navy sáng hơn */
 
-  /* Chữ xanh-trắng sáng rõ ràng, tương phản tốt */
-  --text-primary: #E8F4FF;  /* Ice Blue White — tương phản max */
-  --text-secondary: #B8D8F8;/* Soft Sky — dễ đọc */
-  --text-muted: #6FA8D8;    /* Muted Cornflower */
+  /* Chữ trắng sáng rõ ràng, tương phản tối đa */
+  --text-primary: #FFFFFF;  /* Pure White — trắng tinh, rõ ràng tối đa */
+  --text-secondary: #E2F2FF;/* Bright Ice Blue — sáng và dễ đọc */
+  --text-muted: #94C8F5;    /* Clear Cornflower — không bị tối hay chìm */
   --text-inverse: #071628;
 
   /* Brand — pastel xanh sáng hơn cho dark */
@@ -85,22 +85,22 @@
   --brand-yellow: #FFF0A0;  /* Bright Lemon */
 
   /* Accent — xanh sáng rực rỡ trong dark mode */
-  --accent: #4DB8FF;        /* Electric Sky Blue */
-  --accent-light: rgba(77, 184, 255, 0.18);
-  --accent-dark: #80CCFF;   /* Lighter Blue hover */
+  --accent: #60E0FF;        /* Bright Electric Sky/Cyan Blue — sáng rõ trên nền tối */
+  --accent-light: rgba(96, 224, 255, 0.18);
+  --accent-dark: #90EBFF;   /* Lighter Blue hover */
 
   --accent-sage: #40D8C8;   /* Bright Teal */
   --accent-gold: #60AFFF;   /* Bright Cornflower */
 
   /* Border — xanh đậm tinh tế */
-  --border-light: rgba(232, 244, 255, 0.08);
-  --border-medium: rgba(232, 244, 255, 0.15);
-  --border-strong: rgba(77, 184, 255, 0.45);
+  --border-light: rgba(232, 244, 255, 0.10);
+  --border-medium: rgba(232, 244, 255, 0.18);
+  --border-strong: rgba(96, 224, 255, 0.50);
 
   --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.6);
   --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.50), 0 1px 3px rgba(0, 0, 0, 0.35);
-  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.60), 0 2px 8px rgba(77, 184, 255, 0.12);
-  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.70), 0 0 40px rgba(77, 184, 255, 0.15);
+  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.60), 0 2px 8px rgba(96, 224, 255, 0.15);
+  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.70), 0 0 40px rgba(96, 224, 255, 0.18);
 }
 
 /* ============================================================

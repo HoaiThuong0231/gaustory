@@ -311,7 +311,7 @@ export function BestPicks() {
                     boxShadow: isActive
                       ? "0 4px 16px color-mix(in srgb, var(--accent) 45%, transparent)"
                       : "var(--shadow-xs)",
-                    fontFamily: "var(--font-body)",
+                    fontFamily: "Arial, sans-serif",
                   }}
                 >
                   <span>{cat.emoji}</span>
@@ -357,13 +357,13 @@ export function BestPicks() {
               <div>
                 <p
                   className="font-semibold text-sm"
-                  style={{ color: "var(--text-primary)", fontFamily: "var(--font-body)" }}
+                  style={{ color: "var(--text-primary)", fontFamily: "Arial, sans-serif" }}
                 >
                   {activeMeta.label}
                 </p>
                 <p
                   className="text-xs mt-0.5"
-                  style={{ color: "var(--text-muted)" }}
+                  style={{ color: "var(--text-muted)", fontFamily: "Arial, sans-serif" }}
                 >
                   {activeMeta.description} &middot;{" "}
                   <strong style={{ color: "var(--accent)" }}>
@@ -395,7 +395,7 @@ export function BestPicks() {
                 color: "var(--text-primary)",
                 borderColor: searchQuery ? "var(--accent)" : "var(--border-medium)",
                 boxShadow: searchQuery ? "0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent)" : "var(--shadow-xs)",
-                fontFamily: "var(--font-body)",
+                fontFamily: "Arial, sans-serif",
               }}
             />
             {searchQuery && (

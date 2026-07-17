@@ -23,7 +23,7 @@ export const featuredVideos: FeaturedVideo[] = [
     title: "Routine của Gấu",
     description:
       "Những khoảnh khắc đời thường của Gấu — từ buổi sáng thức dậy, giờ ăn, giờ chơi đến lúc chìm vào giấc ngủ.",
-    thumbnail: "/images/video-thumb-2.jpg",
+    thumbnail: "/images/video-thumb-2.png",
     tiktokUrl: "https://www.tiktok.com/@gaustory/collection/Routine-7659328884651625232",
     category: "Routine",
   },

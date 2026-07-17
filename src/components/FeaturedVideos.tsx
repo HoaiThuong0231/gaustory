@@ -52,50 +52,45 @@ function VideoCard({
           (e.currentTarget as HTMLElement).style.boxShadow = "var(--shadow-sm)";
         }}
       >
-        {/* Thumbnail */}
+        {/* Square Thumbnail Container */}
         <div
-          className="relative overflow-hidden"
-          style={{ aspectRatio: "16/9" }}
+          className="relative overflow-hidden w-full"
+          style={{ aspectRatio: "1 / 1" }}
         >
-          {/* Gradient placeholder */}
-          <div
-            className="absolute inset-0 transition-transform duration-700 ease-out"
+          {/* Thumbnail Image */}
+          <img
+            src={video.thumbnail}
+            alt={video.title}
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out"
             style={{
-              background: bgColors[index % bgColors.length],
-              transform: hovered ? "scale(1.04)" : "scale(1)",
+              transform: hovered ? "scale(1.08)" : "scale(1)",
             }}
           />
 
-          {/* Center emoji */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span
-              className="transition-transform duration-500"
-              style={{
-                fontSize: "3.5rem",
-                transform: hovered ? "scale(1.1)" : "scale(1)",
-              }}
-            >
-              {emojis[index % emojis.length]}
-            </span>
-          </div>
+          {/* Subtle dark tint over image */}
+          <div
+            className="absolute inset-0 transition-opacity duration-300"
+            style={{
+              background: "rgba(0, 0, 0, 0.28)",
+              opacity: hovered ? 0.45 : 0.28,
+            }}
+          />
 
-          {/* Category badge */}
-          <div className="absolute top-4 left-4">
+          {/* Category badge at top-left */}
+          <div className="absolute top-4 left-4 z-10">
             <span
-              className="text-label px-3 py-1.5 rounded-full"
+              className="text-label px-3.5 py-1.5 rounded-full backdrop-blur-md shadow-sm font-semibold text-xs"
               style={{
-                background: "color-mix(in srgb, var(--bg-base) 90%, transparent)",
-                color: "var(--text-secondary)",
-                backdropFilter: "blur(8px)",
+                background: "rgba(255, 255, 255, 0.88)",
+                color: "var(--text-primary)",
               }}
             >
               {video.category}
             </span>
           </div>
 
-
-          {/* Play button overlay */}
-          <div className="absolute inset-0 flex items-center justify-center">
+          {/* Play button overlay when hovered */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <AnimatePresence>
               {hovered && (
                 <motion.div
@@ -103,65 +98,39 @@ function VideoCard({
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.8 }}
                   transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
-                  className="w-16 h-16 rounded-full flex items-center justify-center"
+                  className="w-16 h-16 rounded-full flex items-center justify-center shadow-lg backdrop-blur-md"
                   style={{
-                    background: "var(--bg-card)",
-                    boxShadow: "var(--shadow-lg)",
+                    background: "rgba(255, 255, 255, 0.92)",
                   }}
                 >
                   <Play
-                    size={20}
+                    size={22}
                     strokeWidth={0}
-                    fill="var(--text-primary)"
-                    style={{ marginLeft: "2px" }}
+                    fill="var(--accent)"
+                    style={{ marginLeft: "3px" }}
                   />
                 </motion.div>
               )}
             </AnimatePresence>
           </div>
 
-          {/* Bottom gradient */}
-          <div
-            className="absolute bottom-0 left-0 right-0 h-12 pointer-events-none"
-            style={{
-              background:
-                "linear-gradient(to top, color-mix(in srgb, var(--bg-card) 40%, transparent), transparent)",
-            }}
-          />
-        </div>
-
-        {/* Content */}
-        <div className="p-6 flex flex-col flex-1">
-          <h3
-            className="mb-2 font-medium transition-colors duration-200 group-hover:text-[var(--accent)]"
-            style={{
-              color: "var(--text-primary)",
-              fontSize: "1.0625rem",
-              fontFamily: "var(--font-heading)",
-              fontWeight: 500,
-              lineHeight: "1.4",
-            }}
-          >
-            {video.title}
-          </h3>
-          <p
-            className="mb-4 flex-1"
-            style={{
-              color: "var(--text-muted)",
-              fontSize: "0.875rem",
-              lineHeight: "1.6",
-            }}
-          >
-            {video.description}
-          </p>
-          <div className="flex items-center gap-1.5">
-            <ExternalLink size={13} strokeWidth={1.5} color="var(--accent)" />
-            <span
-              className="text-[11px] font-bold tracking-wider uppercase"
-              style={{ fontFamily: "var(--font-body)", color: "var(--accent)" }}
+          {/* TikTok action indicator at bottom-right */}
+          <div className="absolute bottom-4 right-4 z-10">
+            <div
+              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full backdrop-blur-md transition-all duration-300 shadow-md"
+              style={{
+                background: hovered ? "var(--accent)" : "rgba(255, 255, 255, 0.88)",
+                color: hovered ? "#fff" : "var(--text-primary)",
+              }}
             >
-              Xem trên TikTok
-            </span>
+              <ExternalLink size={13} strokeWidth={1.5} />
+              <span
+                className="text-[11px] font-bold tracking-wider uppercase"
+                style={{ fontFamily: "Arial, sans-serif" }}
+              >
+                Xem TikTok ↗
+              </span>
+            </div>
           </div>
         </div>
       </motion.a>

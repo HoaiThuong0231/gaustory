@@ -5,6 +5,7 @@ export interface Category {
   icon: string; // lucide icon name
   tag: string;
   url?: string; // optional external link
+  image?: string; // optional cover photo
 }
 
 export const categories: Category[] = [
@@ -15,6 +16,7 @@ export const categories: Category[] = [
       "Chỉ những sản phẩm Mẹ Gấu thực sự dùng và kiểm chứng mới được chia sẻ đến cộng đồng.",
     icon: "Star",
     tag: "Chân thật",
+    image: "/images/video-thumb-3.jpg",
   },
   {
     id: "cat-weaning",
@@ -24,6 +26,7 @@ export const categories: Category[] = [
     icon: "Utensils",
     tag: "Dinh dưỡng",
     url: "https://www.tiktok.com/@gaustory/collection/Series%20%C4%82n%20D%E1%BA%B7m-7658534796427692801",
+    image: "/images/video-thumb-1.jpg",
   },
   {
     id: "cat-routine",
@@ -33,6 +36,7 @@ export const categories: Category[] = [
     icon: "Sun",
     tag: "Lối sống",
     url: "https://www.tiktok.com/@gaustory/collection/Routine-7659328884651625232",
+    image: "/images/video-thumb-2.png",
   },
   {
     id: "cat-care",
